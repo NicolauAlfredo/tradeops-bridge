@@ -1,5 +1,6 @@
 import type { Language } from "../../types/language.type";
 import AboutSection from "./components/AboutSection/AboutSection";
+import ContactSection from "./components/ContactSection/ContactSection";
 import HeroSection from "./components/HeroSection/HeroSection";
 import ServicesSection from "./components/ServicesSection/ServicesSection";
 import TeamSection from "./components/TeamSection/TeamSection";
@@ -17,6 +18,7 @@ function Home({ currentLanguage }: HomeProps) {
       <ServicesSection currentLanguage={currentLanguage} />
       <VisionSection currentLanguage={currentLanguage} />
       <TeamSection currentLanguage={currentLanguage} />
+      <ContactSection currentLanguage={currentLanguage} />
     </main>
   );
 }
