@@ -13,7 +13,7 @@ body {
 }
 
 @media (max-width: 500px) {
-  section:not(#home) {
+  .page-section {
     padding: 68px 5%;
   }
 }
