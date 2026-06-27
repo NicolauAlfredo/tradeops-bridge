@@ -1,0 +1,1 @@
+export type Language = "it" | "pt" | "en";
