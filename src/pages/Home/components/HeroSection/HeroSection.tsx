@@ -1,4 +1,6 @@
 import type { Language } from "../../../../types/language.type";
+import Button from "../../../../components/ui/Button/Button";
+
 import "./HeroSection.css";
 
 type HeroSectionProps = {
@@ -63,19 +65,11 @@ function HeroSection({ currentLanguage }: HeroSectionProps) {
         <p className="hero-section__description">{content.description}</p>
 
         <div className="hero-section__actions">
-          <a
-            href="#contact"
-            className="hero-section__button hero-section__button--primary"
-          >
-            {content.primaryAction}
-          </a>
+          <Button href="#contact">{content.primaryAction}</Button>
 
-          <a
-            href="#services"
-            className="hero-section__button hero-section__button--outline"
-          >
+          <Button href="#services" variant="outline">
             {content.secondaryAction}
-          </a>
+          </Button>
         </div>
 
         <div className="hero-section__stats">
