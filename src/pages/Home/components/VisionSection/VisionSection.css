@@ -1,0 +1,118 @@
+.vision-section {
+  background: var(--color-cream);
+}
+
+.vision-section__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.vision-section__visual {
+  min-height: 360px;
+  border-radius: 14px;
+  background:
+    linear-gradient(rgba(13, 27, 62, 0.68), rgba(13, 27, 62, 0.68)),
+    linear-gradient(135deg, #0d1b3e, #1a3260 55%, #c8962e);
+  box-shadow: 0 8px 40px rgba(13, 27, 62, 0.13);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vision-section__map-card {
+  width: min(340px, 82%);
+  padding: 34px;
+  border: 1px solid rgba(224, 173, 74, 0.45);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  text-align: center;
+  backdrop-filter: blur(12px);
+}
+
+.vision-section__map-card span {
+  display: block;
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.vision-section__line {
+  width: 2px;
+  height: 74px;
+  margin: 18px auto;
+  background: linear-gradient(
+    to bottom,
+    var(--color-green),
+    #fff,
+    var(--color-red)
+  );
+  border-radius: 999px;
+}
+
+.vision-section__title {
+  max-width: 640px;
+  margin-bottom: 18px;
+  color: var(--color-navy);
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.22;
+}
+
+.vision-section__quote {
+  position: relative;
+  padding: 36px 48px;
+  color: var(--color-navy);
+  font-family: var(--font-heading);
+  font-size: clamp(1.2rem, 2.3vw, 1.7rem);
+  font-weight: 700;
+  line-height: 1.55;
+}
+
+.vision-section__quote::before {
+  content: "“";
+  position: absolute;
+  top: 0;
+  left: 4px;
+  color: var(--color-gold);
+  opacity: 0.22;
+  font-family: Georgia, serif;
+  font-size: 7rem;
+  line-height: 1;
+}
+
+.vision-section__tags {
+  display: flex;
+  gap: 12px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.vision-section__tag {
+  background: var(--color-navy);
+  color: var(--color-gold-light);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 7px 16px;
+  border-radius: 20px;
+}
+
+@media (max-width: 960px) {
+  .vision-section__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .vision-section__quote {
+    padding: 28px 16px;
+  }
+}
