@@ -1,13 +1,13 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import CookiePolicy from "../pages/CookiePolicy/CookiePolicy";
-import PrivacyPolicy from "../pages/PrivacyPolicy/PrivacyPolicy";
 import App from "../App";
-import { Home } from "lucide-react";
+import CookiePolicy from "../pages/CookiePolicy/CookiePolicy";
+import Home from "../pages/Home/Home";
+import PrivacyPolicy from "../pages/PrivacyPolicy/PrivacyPolicy";
 
 function AppRouter() {
   return (
-    <BrowserRouter basename="/tradeops-bridge">
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Routes>
         <Route path="/" element={<App />}>
           <Route index element={<Home />} />

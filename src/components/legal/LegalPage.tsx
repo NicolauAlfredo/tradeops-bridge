@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import "./LegalLayout.css";
+import "./LegalPage.css";
 
 type LegalLayoutProps = {
   title: string;
