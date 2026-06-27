@@ -31,9 +31,15 @@ function TeamSection({ currentLanguage }: TeamSectionProps) {
             </div>
 
             <div className="team-section__info">
-              <span className="team-section__role">{member.role}</span>
+              <span className="team-section__role">
+                {member.role[currentLanguage]}
+              </span>
+
               <h3 className="team-section__name">{member.name}</h3>
-              <p className="team-section__text">{member.summary}</p>
+
+              <p className="team-section__text">
+                {member.summary[currentLanguage]}
+              </p>
             </div>
           </article>
         ))}
