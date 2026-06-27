@@ -1,16 +1,17 @@
-import LanguageSwitcher from "./components/ui/LanguageSwitcher/LanguageSwitcher";
+import Header from "./components/layout/Header/Header";
 import { useLanguage } from "./hooks/useLanguage";
 
 function App() {
   const { language, changeLanguage } = useLanguage();
 
   return (
-    <div style={{ padding: "40px", background: "#0d1b3e" }}>
-      <LanguageSwitcher
-        currentLanguage={language}
-        onChangeLanguage={changeLanguage}
-      />
-    </div>
+    <>
+      <Header currentLanguage={language} onChangeLanguage={changeLanguage} />
+
+      <main style={{ paddingTop: "100px" }}>
+        <h1>TradeOps Bridge</h1>
+      </main>
+    </>
   );
 }
 
