@@ -1,0 +1,19 @@
+@import "./reset.css";
+@import "./variables.css";
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--color-cream);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+}
+
+section:not(#home) {
+  padding: 96px 5%;
+}
+
+@media (max-width: 500px) {
+  section:not(#home) {
+    padding: 68px 5%;
+  }
+}

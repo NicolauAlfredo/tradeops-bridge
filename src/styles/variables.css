@@ -1,0 +1,25 @@
+:root {
+  --color-navy: #0d1b3e;
+  --color-navy-light: #162448;
+  --color-gold: #c8962e;
+  --color-gold-light: #e0ad4a;
+
+  --color-cream: #f7f3ec;
+  --color-stone: #e8e0d4;
+
+  --color-text-primary: #0d1b3e;
+  --color-text-secondary: #3a4a6b;
+  --color-text-muted: #6b7a99;
+
+  --color-green: #009246;
+  --color-red: #ce2b37;
+
+  --font-primary: "Inter", sans-serif;
+  --font-heading: "Playfair Display", serif;
+
+  --container-width: 1100px;
+  --header-height: 66px;
+
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+}
