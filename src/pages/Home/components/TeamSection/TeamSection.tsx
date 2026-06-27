@@ -1,6 +1,8 @@
 import SectionLabel from "../../../../components/ui/SectionLabel/SectionLabel";
 import { teamContent } from "../../../../data/homeContent";
 import type { Language } from "../../../../types/language.type";
+import { teamMembers } from "../../../../data/team";
+
 import "./TeamSection.css";
 
 type TeamSectionProps = {
@@ -22,16 +24,16 @@ function TeamSection({ currentLanguage }: TeamSectionProps) {
       </div>
 
       <div className="team-section__grid">
-        {content.members.map((member) => (
-          <article key={member.name} className="team-section__card">
-            <div className="team-section__avatar" aria-hidden="true">
+        {teamMembers.map((member) => (
+          <article key={member.id} className="team-section__card">
+            <div className="team-section__avatar" aria-label={member.imageAlt}>
               {member.name.charAt(0)}
             </div>
 
             <div className="team-section__info">
               <span className="team-section__role">{member.role}</span>
               <h3 className="team-section__name">{member.name}</h3>
-              <p className="team-section__text">{member.description}</p>
+              <p className="team-section__text">{member.summary}</p>
             </div>
           </article>
         ))}
