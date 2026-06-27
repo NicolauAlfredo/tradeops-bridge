@@ -36,6 +36,7 @@
 .footer__links a:hover {
   color: var(--color-gold-light);
 }
+ 
 
 @media (max-width: 960px) {
   .footer {
