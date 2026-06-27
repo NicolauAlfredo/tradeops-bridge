@@ -144,7 +144,7 @@ export const teamMembers: TeamMember[] = [
   {
     id: "agroconsultoria-ag",
     name: "AgroConsultoria AG",
-    image: "assets/images/team/agroconsultoria-ag.jpg",
+    image: "assets/images/team/agroconsultoria-ag.png",
     linkedin: "#",
     role: {
       it: "Field Data Specialist & Partner",
