@@ -4,6 +4,7 @@ import type { Language } from "../../../../types/language.type";
 import { teamMembers } from "../../../../data/team";
 
 import "./TeamSection.css";
+import { getPublicAssetPath } from "../../../../utils/getPublicAssetPath";
 
 type TeamSectionProps = {
   currentLanguage: Language;
@@ -27,7 +28,19 @@ function TeamSection({ currentLanguage }: TeamSectionProps) {
         {teamMembers.map((member) => (
           <article key={member.id} className="team-section__card">
             <div className="team-section__avatar" aria-label={member.imageAlt}>
-              {member.name.charAt(0)}
+              <a
+                href={member.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="team-section__image-link"
+                aria-label={member.name}
+              >
+                <img
+                  src={getPublicAssetPath(member.image)}
+                  alt={member.imageAlt}
+                  className="team-section__image"
+                />
+              </a>
             </div>
 
             <div className="team-section__info">
@@ -35,7 +48,15 @@ function TeamSection({ currentLanguage }: TeamSectionProps) {
                 {member.role[currentLanguage]}
               </span>
 
-              <h3 className="team-section__name">{member.name}</h3>
+              <h3 className="team-section__name">
+                <a
+                  href={member.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {member.name}
+                </a>
+              </h3>
 
               <p className="team-section__text">
                 {member.summary[currentLanguage]}

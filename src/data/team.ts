@@ -11,6 +11,8 @@ export type TeamMember = {
   longTermVision?: LocalizedText;
   companyPosition?: LocalizedText;
   linkedinTitle?: string;
+  image: string;
+  linkedin: string;
   imageAlt: string;
 };
 
@@ -18,6 +20,8 @@ export const teamMembers: TeamMember[] = [
   {
     id: "giorgio-de-oliveira",
     name: "Giorgio De Oliveira",
+    image: "assets/images/team/giorgio-de-oliveira.jpg",
+    linkedin: "https://www.linkedin.com/in/giorgiodeoliveira/",
     role: {
       it: "Co-Founder & Strategic Advisor",
       pt: "Co-Founder & Strategic Advisor",
@@ -61,6 +65,8 @@ export const teamMembers: TeamMember[] = [
   {
     id: "nicolau-alfredo",
     name: "Nicolau Alfredo",
+    image: "assets/images/team/nicolau-alfredo.png",
+    linkedin: "https://www.linkedin.com/in/nicolaualfredo/",
     role: {
       it: "CTO & Co-Founder",
       pt: "CTO & Co-Founder",
@@ -104,6 +110,8 @@ export const teamMembers: TeamMember[] = [
   {
     id: "sasha-rodrigues",
     name: "Sasha Rodrigues",
+    image: "assets/images/team/sasha-rodrigues.jpg",
+    linkedin: "#",
     role: {
       it: "Technical Lead & Partner",
       pt: "Technical Lead & Partner",
@@ -136,6 +144,8 @@ export const teamMembers: TeamMember[] = [
   {
     id: "agroconsultoria-ag",
     name: "AgroConsultoria AG",
+    image: "assets/images/team/agroconsultoria-ag.jpg",
+    linkedin: "#",
     role: {
       it: "Field Data Specialist & Partner",
       pt: "Field Data Specialist & Partner",
@@ -168,6 +178,8 @@ export const teamMembers: TeamMember[] = [
   {
     id: "nixon-cange",
     name: "Nixon F. Cange",
+    image: "assets/images/team/nixon-cange.jpg",
+    linkedin: "https://www.linkedin.com/in/nixon-fontoura-cange-agronomo/",
     role: {
       it: "Business Development Angola",
       pt: "Business Development Angola",

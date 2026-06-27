@@ -68,6 +68,35 @@
   font-weight: 700;
 }
 
+.team-section__image {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
+}
+
+.team-section__image-link {
+  display: block;
+  overflow: hidden;
+}
+
+.team-section__image-link img {
+  transition: transform 0.3s ease;
+}
+
+.team-section__image-link:hover img {
+  transform: scale(1.05);
+}
+
+.team-section__name a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.team-section__name a:hover {
+  color: var(--color-gold);
+}
+
 .team-section__info {
   padding: 24px 22px;
 }
