@@ -3,6 +3,7 @@ import Button from "../../../../components/ui/Button/Button";
 import { heroContent } from "../../../../data/homeContent";
 
 import "./HeroSection.css";
+import Logo from "../../../../components/ui/Logo/Logo";
 
 type HeroSectionProps = {
   currentLanguage: Language;
@@ -14,11 +15,15 @@ function HeroSection({ currentLanguage }: HeroSectionProps) {
   return (
     <section id="home" className="hero-section">
       <div className="hero-section__content">
-        <p className="hero-section__eyebrow">TradeOps Bridge</p>
+        <p className="hero-section__eyebrow">
+          <Logo className="header__logo-image" />
+        </p>
 
         <h1 className="hero-section__title">
           {content.title.replace(content.highlight, "")}
-          <em>{content.highlight}</em>
+          <p>
+            <em>{content.highlight}</em>
+          </p>
         </h1>
 
         <p className="hero-section__description">{content.description}</p>
