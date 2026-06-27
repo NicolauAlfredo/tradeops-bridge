@@ -98,7 +98,7 @@ export const contactContent = {
     emailLabel: "Email",
     phoneLabel: "Telefono",
     locationLabel: "Area operativa",
-    location: "Italia · Angola",
+    location: "Italia - Angola",
     cta: "Scrivici",
   },
   pt: {
