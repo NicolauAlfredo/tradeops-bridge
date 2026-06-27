@@ -1,0 +1,109 @@
+.team-section {
+  background: var(--color-stone);
+}
+
+.team-section__top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+  max-width: var(--container-width);
+  margin: 0 auto 64px;
+}
+
+.team-section__title {
+  max-width: 640px;
+  color: var(--color-navy);
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.22;
+}
+
+.team-section__description {
+  max-width: 600px;
+  color: var(--color-text-secondary);
+  font-size: 0.97rem;
+  line-height: 1.78;
+}
+
+.team-section__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.team-section__card {
+  overflow: hidden;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(13, 27, 62, 0.07);
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.team-section__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(13, 27, 62, 0.13);
+}
+
+.team-section__avatar {
+  aspect-ratio: 16 / 10;
+  background:
+    radial-gradient(
+      circle at 50% 25%,
+      rgba(224, 173, 74, 0.3),
+      transparent 36%
+    ),
+    linear-gradient(135deg, var(--color-navy), #1a3260);
+  color: var(--color-gold-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.team-section__info {
+  padding: 24px 22px;
+}
+
+.team-section__role {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--color-gold);
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.team-section__name {
+  margin-bottom: 8px;
+  color: var(--color-navy);
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.team-section__text {
+  color: var(--color-text-muted);
+  font-size: 0.84rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 960px) {
+  .team-section__top {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .team-section__grid {
+    grid-template-columns: 1fr;
+    max-width: 460px;
+  }
+}
