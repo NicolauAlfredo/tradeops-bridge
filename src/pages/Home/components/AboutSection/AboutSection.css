@@ -1,0 +1,107 @@
+.about-section {
+  background: var(--color-cream);
+}
+
+.about-section__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.about-section__title {
+  max-width: 640px;
+  margin-bottom: 18px;
+  color: var(--color-navy);
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.22;
+}
+
+.about-section__description {
+  max-width: 600px;
+  color: var(--color-text-secondary);
+  font-size: 0.97rem;
+  line-height: 1.78;
+}
+
+.about-section__list {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin-top: 28px;
+  list-style: none;
+}
+
+.about-section__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  color: var(--color-text-secondary);
+  font-size: 0.92rem;
+}
+
+.about-section__item::before {
+  content: "✓";
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  background: var(--color-gold);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 0.65rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-section__visual {
+  min-height: 340px;
+  border-radius: 14px;
+  background:
+    linear-gradient(rgba(13, 27, 62, 0.72), rgba(13, 27, 62, 0.72)),
+    linear-gradient(135deg, var(--color-navy), var(--color-gold));
+  box-shadow: 0 8px 40px rgba(13, 27, 62, 0.13);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-section__card {
+  width: min(320px, 80%);
+  padding: 32px;
+  border: 1px solid rgba(224, 173, 74, 0.45);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  text-align: center;
+  backdrop-filter: blur(12px);
+}
+
+.about-section__card span {
+  display: block;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.about-section__card strong {
+  display: block;
+  margin: 18px 0;
+  color: var(--color-gold-light);
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+
+@media (max-width: 960px) {
+  .about-section__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
