@@ -12,7 +12,7 @@ function ContactSection({ currentLanguage }: ContactSectionProps) {
   const content = contactContent[currentLanguage];
 
   return (
-    <section id="contact" className="contact-section">
+    <section id="contact" className="page-section contact-section">
       <div className="contact-section__content">
         <SectionLabel>{content.label}</SectionLabel>
 

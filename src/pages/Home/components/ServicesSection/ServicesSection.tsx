@@ -11,7 +11,7 @@ function ServicesSection({ currentLanguage }: ServicesSectionProps) {
   const content = servicesContent[currentLanguage];
 
   return (
-    <section id="services" className="services-section">
+    <section id="services" className="page-section services-section">
       <div className="services-section__top">
         <div>
           <SectionLabel>{content.label}</SectionLabel>

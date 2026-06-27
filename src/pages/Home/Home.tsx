@@ -1,4 +1,7 @@
-import type { Language } from "../../types/language.type";
+import { useOutletContext } from "react-router-dom";
+
+import type { RouterContext } from "../../types/router.type";
+
 import AboutSection from "./components/AboutSection/AboutSection";
 import ContactSection from "./components/ContactSection/ContactSection";
 import HeroSection from "./components/HeroSection/HeroSection";
@@ -6,11 +9,9 @@ import ServicesSection from "./components/ServicesSection/ServicesSection";
 import TeamSection from "./components/TeamSection/TeamSection";
 import VisionSection from "./components/VisionSection/VisionSection";
 
-type HomeProps = {
-  currentLanguage: Language;
-};
+function Home() {
+  const { currentLanguage } = useOutletContext<RouterContext>();
 
-function Home({ currentLanguage }: HomeProps) {
   return (
     <main>
       <HeroSection currentLanguage={currentLanguage} />

@@ -14,7 +14,7 @@ function TeamSection({ currentLanguage }: TeamSectionProps) {
   const content = teamContent[currentLanguage];
 
   return (
-    <section id="team" className="team-section">
+    <section id="team" className="page-section team-section">
       <div className="team-section__top">
         <div>
           <SectionLabel>{content.label}</SectionLabel>
