@@ -4,6 +4,7 @@ import type { Language } from "../../../types/language.type";
 import LanguageSwitcher from "../../ui/LanguageSwitcher/LanguageSwitcher";
 import Logo from "../../ui/Logo/Logo";
 import "./Header.css";
+import { Link } from "react-router-dom";
 
 type HeaderProps = {
   currentLanguage: Language;
@@ -31,9 +32,9 @@ function Header({ currentLanguage, onChangeLanguage }: HeaderProps) {
   return (
     <header className="header">
       <nav className="header__nav" aria-label="Main navigation">
-        <a href="#home" className="header__logo" onClick={handleCloseMenu}>
+        <Link to="/" className="header__logo" onClick={handleCloseMenu}>
           <Logo />
-        </a>
+        </Link>
 
         <ul className="header__links">
           {navigationItems.map((item) => (

@@ -13,7 +13,7 @@ function HeroSection({ currentLanguage }: HeroSectionProps) {
   const content = heroContent[currentLanguage];
 
   return (
-    <section id="home" className="hero-section">
+    <section id="home" className="page-section hero-section">
       <div className="hero-section__content">
         <p className="hero-section__eyebrow">
           <Logo className="header__logo-image" />

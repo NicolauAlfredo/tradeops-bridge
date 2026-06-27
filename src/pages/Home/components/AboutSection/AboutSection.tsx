@@ -12,7 +12,7 @@ function AboutSection({ currentLanguage }: AboutSectionProps) {
   const content = aboutContent[currentLanguage];
 
   return (
-    <section id="about" className="about-section">
+    <section id="about" className="page-section about-section">
       <div className="about-section__grid">
         <div className="about-section__content">
           <SectionLabel>{content.label}</SectionLabel>

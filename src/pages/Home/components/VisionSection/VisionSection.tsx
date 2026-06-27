@@ -12,7 +12,7 @@ function VisionSection({ currentLanguage }: VisionSectionProps) {
   const content = visionContent[currentLanguage];
 
   return (
-    <section id="vision" className="vision-section">
+    <section id="vision" className="page-section vision-section">
       <div className="vision-section__grid">
         <div className="vision-section__visual">
           <img

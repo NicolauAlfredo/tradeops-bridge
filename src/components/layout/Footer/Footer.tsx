@@ -33,9 +33,9 @@ function Footer({ currentLanguage }: FooterProps) {
 
   return (
     <footer className="footer">
-      <a href="#home" className="footer__brand">
+      <Link to="/" className="footer__brand">
         TradeOps Bridge
-      </a>
+      </Link>
 
       <p className="footer__copy">
         © {currentYear} {content.copy}
