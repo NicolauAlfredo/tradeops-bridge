@@ -22,16 +22,23 @@ function ServicesSection({ currentLanguage }: ServicesSectionProps) {
       </div>
 
       <div className="services-section__cards">
-        {content.services.map((service) => (
-          <article key={service.title} className="services-section__card">
-            <div className="services-section__icon" aria-hidden="true">
-              {service.icon}
-            </div>
+        {content.services.map((service) => {
+          const Icon = service.icon;
 
-            <h3>{service.title}</h3>
-            <p>{service.description}</p>
-          </article>
-        ))}
+          return (
+            <article key={service.title} className="services-section__card">
+              <div className="services-section__icon" aria-hidden="true">
+                <Icon
+                  className="services-section__icon-svg"
+                  strokeWidth={1.8}
+                />
+              </div>
+
+              <h3>{service.title}</h3>
+              <p>{service.description}</p>
+            </article>
+          );
+        })}
       </div>
     </section>
   );

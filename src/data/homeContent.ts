@@ -1,3 +1,13 @@
+import type { LucideIcon } from "lucide-react";
+
+import { ChartColumn, Handshake, BriefcaseBusiness } from "lucide-react";
+
+export type Service = {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+};
+
 export const heroContent = {
   it: {
     title: "Il Gateway Agritech Italia–Angola",
@@ -125,19 +135,19 @@ export const servicesContent = {
       "La nostra attività combina intelligence di mercato, sviluppo commerciale e supporto operativo per ridurre incertezza e tempi di ingresso.",
     services: [
       {
-        icon: "📊",
+        icon: ChartColumn,
         title: "Market Intelligence",
         description:
           "Raccolta, strutturazione e analisi di dati pubblici e locali sul settore agricolo angolano.",
       },
       {
-        icon: "🤝",
+        icon: Handshake,
         title: "Business Matching",
         description:
           "Connessione con aziende, cooperative, distributori, istituzioni e partner locali qualificati.",
       },
       {
-        icon: "⚙️",
+        icon: BriefcaseBusiness,
         title: "Operational Support",
         description:
           "Supporto pratico nella validazione del mercato, nelle trattative e nella fase di ingresso operativo.",
@@ -151,19 +161,19 @@ export const servicesContent = {
       "A nossa atividade combina inteligência de mercado, desenvolvimento comercial e suporte operacional para reduzir incerteza e tempo de entrada.",
     services: [
       {
-        icon: "📊",
+        icon: ChartColumn,
         title: "Inteligência de Mercado",
         description:
           "Recolha, estruturação e análise de dados públicos e locais sobre o setor agrícola angolano.",
       },
       {
-        icon: "🤝",
+        icon: Handshake,
         title: "Business Matching",
         description:
           "Ligação com empresas, cooperativas, distribuidores, instituições e parceiros locais qualificados.",
       },
       {
-        icon: "⚙️",
+        icon: BriefcaseBusiness,
         title: "Suporte Operacional",
         description:
           "Apoio prático na validação do mercado, nas negociações e na fase de entrada operacional.",
@@ -178,19 +188,19 @@ export const servicesContent = {
       "Our work combines market intelligence, business development and operational support to reduce uncertainty and time to market.",
     services: [
       {
-        icon: "📊",
+        icon: ChartColumn,
         title: "Market Intelligence",
         description:
           "Collection, structuring and analysis of public and local data about Angola’s agricultural sector.",
       },
       {
-        icon: "🤝",
+        icon: Handshake,
         title: "Business Matching",
         description:
           "Connection with companies, cooperatives, distributors, institutions and qualified local partners.",
       },
       {
-        icon: "⚙️",
+        icon: BriefcaseBusiness,
         title: "Operational Support",
         description:
           "Practical support during market validation, negotiations and operational market entry.",
