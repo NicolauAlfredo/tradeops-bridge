@@ -1,6 +1,7 @@
 import SectionLabel from "../../../../components/ui/SectionLabel/SectionLabel";
 import { visionContent } from "../../../../data/homeContent";
 import type { Language } from "../../../../types/language.type";
+import { getPublicAssetPath } from "../../../../utils/getPublicAssetPath";
 import "./VisionSection.css";
 
 type VisionSectionProps = {
@@ -13,12 +14,14 @@ function VisionSection({ currentLanguage }: VisionSectionProps) {
   return (
     <section id="vision" className="vision-section">
       <div className="vision-section__grid">
-        <div className="vision-section__visual" aria-hidden="true">
-          <div className="vision-section__map-card">
-            <span>Italia</span>
-            <div className="vision-section__line" />
-            <span>Angola</span>
-          </div>
+        <div className="vision-section__visual">
+          <img
+            src={getPublicAssetPath(
+              "assets/images/vision/market-intelligence.png",
+            )}
+            alt="TradeOps Bridge market intelligence platform"
+            className="vision-section__image"
+          />
         </div>
 
         <div className="vision-section__content">

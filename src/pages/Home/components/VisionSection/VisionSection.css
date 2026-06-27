@@ -23,22 +23,17 @@
   justify-content: center;
 }
 
-.vision-section__map-card {
-  width: min(340px, 82%);
-  padding: 34px;
-  border: 1px solid rgba(224, 173, 74, 0.45);
+.vision-section__image {
+  display: block;
+  width: 105%;
+  max-width: 620px;
+  height: auto;
+  transition: transform var(--transition-fast);
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.08);
-  text-align: center;
-  backdrop-filter: blur(12px);
 }
 
-.vision-section__map-card span {
-  display: block;
-  color: #fff;
-  font-family: var(--font-heading);
-  font-size: 1.4rem;
-  font-weight: 700;
+.vision-section__image:hover {
+  transform: scale(1.02);
 }
 
 .vision-section__line {
