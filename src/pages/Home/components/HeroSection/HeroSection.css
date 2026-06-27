@@ -1,0 +1,135 @@
+.hero-section {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      ellipse 80% 50% at 50% 100%,
+      rgba(200, 150, 46, 0.1) 0%,
+      transparent 70%
+    ),
+    linear-gradient(
+      160deg,
+      var(--color-navy) 0%,
+      var(--color-navy-light) 60%,
+      #1a3260 100%
+    );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 110px 5% 80px;
+}
+
+.hero-section__content {
+  max-width: 780px;
+}
+
+.hero-section__eyebrow {
+  color: var(--color-gold-light);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.hero-section__title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.18;
+  margin-bottom: 22px;
+}
+
+.hero-section__title em {
+  color: var(--color-gold-light);
+  font-style: normal;
+}
+
+.hero-section__description {
+  max-width: 560px;
+  margin: 0 auto 40px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: clamp(0.95rem, 2vw, 1.12rem);
+  line-height: 1.75;
+}
+
+.hero-section__actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.hero-section__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  font-size: 0.93rem;
+  font-weight: 600;
+  padding: 13px 30px;
+  border-radius: 8px;
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.hero-section__button:hover {
+  transform: translateY(-2px);
+}
+
+.hero-section__button--primary {
+  background: var(--color-gold);
+  color: #fff;
+}
+
+.hero-section__button--primary:hover {
+  background: var(--color-gold-light);
+}
+
+.hero-section__button--outline {
+  color: #fff;
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+}
+
+.hero-section__button--outline:hover {
+  color: var(--color-gold-light);
+  border-color: var(--color-gold-light);
+}
+
+.hero-section__stats {
+  display: flex;
+  justify-content: center;
+  gap: 44px;
+  flex-wrap: wrap;
+  margin-top: 64px;
+  padding-top: 36px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.hero-section__stat strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--color-gold-light);
+}
+
+.hero-section__stat span {
+  display: block;
+  margin-top: 4px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.73rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 500px) {
+  .hero-section__stats {
+    gap: 24px;
+  }
+}

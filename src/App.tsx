@@ -1,5 +1,6 @@
 import Header from "./components/layout/Header/Header";
 import { useLanguage } from "./hooks/useLanguage";
+import Home from "./pages/Home/Home";
 
 function App() {
   const { language, changeLanguage } = useLanguage();
@@ -7,10 +8,7 @@ function App() {
   return (
     <>
       <Header currentLanguage={language} onChangeLanguage={changeLanguage} />
-
-      <main style={{ paddingTop: "100px" }}>
-        <h1>TradeOps Bridge</h1>
-      </main>
+      <Home currentLanguage={language} />
     </>
   );
 }

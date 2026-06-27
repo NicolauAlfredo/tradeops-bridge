@@ -50,6 +50,10 @@ function Header({ currentLanguage, onChangeLanguage }: HeaderProps) {
             onChangeLanguage={onChangeLanguage}
           />
 
+          <a href="#contact" className="header__cta">
+            {contactLabel}
+          </a>
+
           <button
             type="button"
             className="header__menu-button"
