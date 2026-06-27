@@ -1,48 +1,60 @@
-import type {
-  AnchorHTMLAttributes,
-  ButtonHTMLAttributes,
-  ReactNode,
-} from "react";
+import type { ReactNode } from "react";
 import "./Button.css";
 
 type ButtonVariant = "primary" | "outline";
 
-type BaseButtonProps = {
+type CommonButtonProps = {
   children: ReactNode;
   variant?: ButtonVariant;
   className?: string;
 };
 
-type ButtonAsButtonProps = BaseButtonProps &
-  ButtonHTMLAttributes<HTMLButtonElement> & {
-    href?: never;
-  };
+type LinkButtonProps = CommonButtonProps & {
+  href: string;
+  target?: string;
+  rel?: string;
+  onClick?: () => void;
+};
 
-type ButtonAsLinkProps = BaseButtonProps &
-  AnchorHTMLAttributes<HTMLAnchorElement> & {
-    href: string;
-  };
+type NativeButtonProps = CommonButtonProps & {
+  href?: undefined;
+  type?: "button" | "submit" | "reset";
+  disabled?: boolean;
+  onClick?: () => void;
+};
 
-type ButtonProps = ButtonAsButtonProps | ButtonAsLinkProps;
+type ButtonProps = LinkButtonProps | NativeButtonProps;
 
-function Button({
-  children,
-  variant = "primary",
-  className = "",
-  ...props
-}: ButtonProps) {
-  const buttonClassName = `button button--${variant} ${className}`.trim();
+function Button(props: ButtonProps) {
+  const buttonClassName = `button button--${props.variant ?? "primary"} ${
+    props.className ?? ""
+  }`.trim();
 
-  if ("href" in props && props.href) {
+  if (props.href !== undefined) {
+    const { href, target, rel, onClick, children } = props;
+
     return (
-      <a className={buttonClassName} {...props}>
+      <a
+        href={href}
+        target={target}
+        rel={rel}
+        onClick={onClick}
+        className={buttonClassName}
+      >
         {children}
       </a>
     );
   }
 
+  const { type = "button", disabled, onClick, children } = props;
+
   return (
-    <button className={buttonClassName} {...props}>
+    <button
+      type={type}
+      disabled={disabled}
+      onClick={onClick}
+      className={buttonClassName}
+    >
       {children}
     </button>
   );
