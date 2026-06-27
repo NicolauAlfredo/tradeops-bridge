@@ -1,6 +1,7 @@
 import SectionLabel from "../../../../components/ui/SectionLabel/SectionLabel";
 import { aboutContent } from "../../../../data/homeContent";
 import type { Language } from "../../../../types/language.type";
+import { getPublicAssetPath } from "../../../../utils/getPublicAssetPath";
 import "./AboutSection.css";
 
 type AboutSectionProps = {
@@ -29,12 +30,12 @@ function AboutSection({ currentLanguage }: AboutSectionProps) {
           </ul>
         </div>
 
-        <div className="about-section__visual" aria-hidden="true">
-          <div className="about-section__card">
-            <span>Italy</span>
-            <strong>TradeOps Bridge</strong>
-            <span>Angola</span>
-          </div>
+        <div className="about-section__visual">
+          <img
+            src={getPublicAssetPath("assets/images/about/angola-italia1.png")}
+            alt="TradeOps Bridge market connection between Italy and Angola"
+            className="about-section__image"
+          />
         </div>
       </div>
     </section>

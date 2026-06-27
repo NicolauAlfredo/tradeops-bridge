@@ -60,43 +60,18 @@
   justify-content: center;
 }
 
-.about-section__visual {
-  min-height: 340px;
-  border-radius: 14px;
-  background:
-    linear-gradient(rgba(13, 27, 62, 0.72), rgba(13, 27, 62, 0.72)),
-    linear-gradient(135deg, var(--color-navy), var(--color-gold));
-  box-shadow: 0 8px 40px rgba(13, 27, 62, 0.13);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.about-section__card {
-  width: min(320px, 80%);
-  padding: 32px;
-  border: 1px solid rgba(224, 173, 74, 0.45);
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.08);
-  text-align: center;
-  backdrop-filter: blur(12px);
-}
-
-.about-section__card span {
+.about-section__image {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
   display: block;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.78rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  transition: transform 0.35s ease;
+  border-radius: 14px;
 }
 
-.about-section__card strong {
-  display: block;
-  margin: 18px 0;
-  color: var(--color-gold-light);
-  font-family: var(--font-heading);
-  font-size: 1.8rem;
-  line-height: 1.2;
+.about-section__image:hover {
+  transform: scale(1.02);
 }
 
 @media (max-width: 960px) {
